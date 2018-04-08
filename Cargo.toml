@@ -1,0 +1,7 @@
+[package]
+name = "haskell-parser"
+version = "0.1.0"
+authors = ["Matt Parsons <parsonsmatt@gmail.com>"]
+
+[dependencies]
+combine = "3.1.*"
