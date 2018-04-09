@@ -32,6 +32,12 @@ pub enum Qualified {
 #[derive(Debug, PartialEq, Clone)]
 pub struct ModuleName(pub String);
 
+impl ModuleName {
+    pub fn from_string(s: &str) -> Self {
+        ModuleName(String::from(s)) 
+    }
+}
+
 #[derive(Debug, PartialEq, Clone)]
 pub enum Declaration {
     Data,
@@ -39,4 +45,14 @@ pub enum Declaration {
     Newtype,
     Value,
     Splice,
+}
+
+/// An identifier.
+#[derive(Debug, PartialEq, Clone)]
+pub struct Identifier(pub String);
+
+impl Identifier {
+    pub fn from_string(s: &str) -> Self {
+        Identifier(String::from(s)) 
+    }
 }
